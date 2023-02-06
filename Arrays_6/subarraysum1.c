@@ -10,6 +10,8 @@ int main()
 		for (int en=st+1; en < n; en++)
 		{	
 			int currSum=0;
+
+			// ........ st en
 			for (int k=st; k<=en ; k++)
 			{
 				currSum+=arr[k];
