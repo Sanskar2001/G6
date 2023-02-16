@@ -7,7 +7,7 @@ int compare(const void* a,const void* b)
     char str1[20],str2[20];
 
     int no1= *(int*)a;
-    int no2=*(int*)b;
+    int no2= *(int*)b;
 
     sprintf(str1,"%d%d", no1,no2);
     sprintf(str2,"%d%d",no2,no1);
@@ -19,7 +19,7 @@ int compare(const void* a,const void* b)
    
 }
 int main() {
-    int t;
+    int t;b
 	scanf("%d",&t);
 
 	while(t--)
