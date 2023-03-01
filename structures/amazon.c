@@ -61,6 +61,24 @@ void changeOrderStatus(struct order* o,enum amazonOrderStatus newStatus)
    o->orderStatus=newStatus;
 }
 
+void printCustomerDetails(cust customersList[100],int n)
+{
+
+    // char customer customerDetails;
+    // int contactNo;
+    // char address[100];
+    // bool isPrime;
+    for (int i = 0; i < n; ++i)
+    {
+        printf("Customer Name: %s\n",customersList[i].customerName);
+        printf("Contact No: %d\n",customersList[i].contactNo);
+        printf("Address: %s\n",customersList[i].address);
+
+        if(customersList[i].isPrime)
+        printf("Prime Member: Yes\n");
+    }
+}
+
  int main()
  {
  	// struct order o1={101,"Yaadwinder",500,"Rajpura,Punjab","Placed"};
@@ -74,7 +92,7 @@ void changeOrderStatus(struct order* o,enum amazonOrderStatus newStatus)
   //   cust c5={"Aditya",23423243,"Rajpura",true};
   //   cust c6={"Yogesh",32434534,"Bangalore",true};
 
-
+    int n=6;
     cust customersList[100]={
         {"Yaadwinder",8238148,"Rajpura",false},
         {"Aditi",334893,"Rajpura",false},
@@ -101,6 +119,9 @@ void changeOrderStatus(struct order* o,enum amazonOrderStatus newStatus)
     changeOrderStatus(&orders[2],Placed);
  	printOrderDetails(orders[2]);
 
+    printf("\n");
+
+    printCustomerDetails(customersList,n);
  
         // aakash a=10;
         // printf("\n \n  %d",a);
