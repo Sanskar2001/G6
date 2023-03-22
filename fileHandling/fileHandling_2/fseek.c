@@ -2,9 +2,12 @@
 int main()
 {
 	// fseek(fp,offset,reFPoint) 
-	FILE *fp=fopen("demo.txt","r");
+	FILE *fp=fopen("demo.txt","r+");
 
-	fseek(fp,-10,SEEK_END);
+	fputc('*',fp);
+
+	fseek(fp,0,SEEK_SET);
+	
 
 	char ch=fgetc(fp);
 
