@@ -13,8 +13,6 @@ void merge(int* arr1,int* arr2,int* c,int n1,int n2)
 
 	int i=0,j=0,k=0;
 
-
-
 	while(i<n1 && j<n2)
 	{
 		if(arr1[i]<arr2[j])
@@ -34,9 +32,6 @@ void merge(int* arr1,int* arr2,int* c,int n1,int n2)
 	{
 		c[k++]=arr2[j++];
 	}
-
-
-
 
 }
 int main()
